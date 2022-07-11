@@ -11,26 +11,26 @@ public class Menu {
 
             Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ведите  число <a> или напишите <OFF> для выхода из программы ");
-            while (!scanner.hasNext("OFF")){
+        System.out.println("Введите  число <a> или напишите <OFF> для выхода из программы ");
+        while (!scanner.hasNext("OFF")){
             while (!scanner.hasNextInt()) {
-            System.out.println("это не целое число");
+            System.out.println("Это не целое число");
             scanner.next();
             }
             a = scanner.nextInt();
             System.out.println("Введите число <b>");
             while (!scanner.hasNextInt()) {
-            System.out.println("это не целое число");
+            System.out.println("Это не целое число");
             scanner.next();
             }
             b = scanner.nextInt();
 
-        System.out.println("Введите операцию");
+            System.out.println("Введите операцию");
                 while (!scanner.hasNext("\\+") && !scanner.hasNext("-") && !scanner.hasNext("\\*") && !scanner.hasNext("/")){
                 System.out.println("Введите +, -, * или /");
                 scanner.next();
                 }c = scanner.next();
-        switch (c){
+            switch (c){
             case "+":
             CalculateSum calculateSum = new CalculateSum();
             System.out.print("Результат = " );
